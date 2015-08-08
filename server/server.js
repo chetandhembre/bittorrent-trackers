@@ -3,7 +3,6 @@ var udpTracker = require('../lib/udpTracker')
 
 var server = new Hapi.Server();
 server.connection({ 
-    host: 'localhost', 
     port: process.env.PORT || 5000 
 });
 
