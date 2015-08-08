@@ -227,7 +227,7 @@ module.exports = function (ip, callback) {
   if (!ipRegex().test(ip)) {
     return callback('Invalid IP address.', null)
   }
-  return httpClient.get('http://freegeoip.net/json/' + ip, function (err, response, body) {
+  return httpClient.get('https://freegeoip.net/json/' + ip, function (err, response, body) {
     var json
     try {
       json = JSON.parse(body)
