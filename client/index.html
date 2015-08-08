@@ -1,0 +1,67 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<style type="text/css">
+  		.leaflet-container {
+  			position: inherit !important;
+  		}
+
+  		.files-dev {
+  			z-index: 100;
+  			position: absolute;
+  			background: #F9690E;;
+  			bottom: 0;
+  			width: 100%;
+  		}
+
+  		.files-dev ul li {
+  			display: inline;
+  		}
+
+
+.file {
+  position: inline;
+}
+.file label {
+  background: #39D2B4;
+  padding: 5px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: .9em;
+  transition: all .4s;
+}
+.file input {
+  opacity: 0.01;
+  cursor: pointer;
+}
+.file input:hover + label,
+.file input:focus + label {
+  background: #34495E;
+  color: #39D2B4;
+}
+  	</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<div class="files-dev">
+		<ul>
+			<li>
+				<span class="file">
+		    		<input type="file" name="file" id="file" />
+		    		<label for="file" id="files">Upload .torrent file</label>
+		 		</span>		
+			</li>
+			<li>
+				<span style="padding-left:50px" id="name">name</span>
+			</li>
+			<li>
+				<a style="padding-left:150px" href="">github</a>	
+			</li>
+		</ul>
+		
+		</div>
+		
+	</body>
+	<script src="./bundle.js"></script>
+</html>
