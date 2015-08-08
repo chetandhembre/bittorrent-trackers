@@ -10,12 +10,15 @@ var fileElement = document.querySelector('#file')
 var magnetLink = document.querySelector('#magnetlink')
 
 function onPeers (peers) {
-  peers.slice(0, 5).forEach(function (peer) {
-    ipLocation(peer, function (err, lat, lng) {
+  peers.slice(0, 10).forEach(function (peer) {
+    setTimeout(function () {
+      ipLocation(peer, function (err, lat, lng) {
         if(!err) {
           mapIt(lat, lng)
         }
-    })
+      })  
+    }, 2000)
+    
   })
 }
 
